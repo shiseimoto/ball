@@ -7,11 +7,12 @@
 <table class="table table-bordered">
   <thead>
     <tr>
-    <th>时间</th>
-    <th>联赛</th>
-    <th>球队</th>
-    <th>信号</th>
-    <th>管理</th>
+      <th>时间</th>
+      <th>联赛</th>
+      <th>球队</th>
+      <th>信号</th>
+      <th>管理</th>
+
   </tr>
 
   </thead>
@@ -29,13 +30,13 @@
       <%= game.description %>
     </td>
     <td>
-    <%= game.signal %>
+    <%= link_to(game.signal,admin_game_path(game), :class => "btn btn-default")  %>
     </td>
     <td>
-      <%= link_to("编辑", edit_admin_game_path(game)) %>
-      <%= link_to("删除", game_path(game), :method => :delete, :data => { :confirm => "Are you sure?"}) %>
+      <%= link_to("Edit", edit_admin_game_path(game), :class => "btn btn-default") %>
+      <%= link_to("Delete",admin_game_path(game), :class => "btn btn-default", :method => :delete, :data => {:confirm => "Are you sure?", }) %>
     </td>
   </tr>
   <% end %>
-</tbody>
-</table>
+  </tbody>
+  </table>
