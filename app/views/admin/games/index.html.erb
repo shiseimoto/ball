@@ -1,10 +1,16 @@
+<div class="pull-right">
+  <%= link_to("增加赛程", new_admin_game_path, :class => "btn btn-default" ) %>
+</div>
+
+<br><br>
+
 <table class="table table-bordered">
   <thead>
     <tr>
     <th>时间</th>
     <th>赛程</th>
     <th>信号</th>
-
+    <th>管理</th>
   </tr>
 
   </thead>
@@ -21,7 +27,10 @@
     <td>
     <%= game.signal %>
     </td>
-
+    <td>
+      <%= link_to("编辑", edit_game_path(game)) %>
+      <%= link_to("删除", game_path(game), :method => :delete, :data => { :confirm => "Are you sure?"}) %>
+    </td>
   </tr>
   <% end %>
 </tbody>
