@@ -1,9 +1,10 @@
 <h1> 编辑 </h1>
 
-<%= simple_form_for @game do |f| %>
+<%= simple_form_for [:admin, @game] do |f| %>
 
 <%= f.input :time %>
 <%= f.input :league %>
+<%= f.input :description %>
 <%= f.input :signal %>
 
   <%= f.submit "Submit" %>

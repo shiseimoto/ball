@@ -8,7 +8,8 @@
   <thead>
     <tr>
     <th>时间</th>
-    <th>赛程</th>
+    <th>联赛</th>
+    <th>球队</th>
     <th>信号</th>
     <th>管理</th>
   </tr>
@@ -25,10 +26,13 @@
       <%= game.league %>
     </td>
     <td>
+      <%= game.description %>
+    </td>
+    <td>
     <%= game.signal %>
     </td>
     <td>
-      <%= link_to("编辑", edit_game_path(game)) %>
+      <%= link_to("编辑", edit_admin_game_path(game)) %>
       <%= link_to("删除", game_path(game), :method => :delete, :data => { :confirm => "Are you sure?"}) %>
     </td>
   </tr>
