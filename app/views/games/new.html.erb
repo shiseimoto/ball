@@ -1,0 +1,10 @@
+<h1> 新增联赛 </h1>
+
+<%= simple_form_for @game do |f| %>
+
+<%= f.input :time %>
+<%= f.input :league %>
+<%= f.input :signal %>
+
+  <%= f.submit "Submit" %>
+<% end %>
