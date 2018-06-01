@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   end
 
   resources :games
-  root 'games#index'
+  root 'welcome#index'
 end

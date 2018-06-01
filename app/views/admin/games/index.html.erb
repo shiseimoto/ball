@@ -2,6 +2,7 @@
   <%= link_to("增加赛程", new_admin_game_path, :class => "btn btn-default" ) %>
 </div>
 
+
 <br><br>
 
 <table class="table table-bordered">
@@ -24,9 +25,12 @@
       <%= game.time %>
     </td>
     <td>
-      <%= game.league %>
+      <i class="fas fa-basketball-ball"></i>
+        <%= game.league  %>
     </td>
+
     <td>
+
       <%= game.description %>
     </td>
     <td>
@@ -34,7 +38,8 @@
     </td>
     <td>
       <%= link_to("Edit", edit_admin_game_path(game), :class => "btn btn-default") %>
-      <%= link_to("Delete",admin_game_path(game), :class => "btn btn-default", :method => :delete, :data => {:confirm => "Are you sure?", }) %>
+
+      <%= link_to("Delete",admin_game_path(game), :class => "fas fa-trash-alt btn btn-danger ",   :method => :delete, :data => {:confirm => "Are you sure?", }) %>
     </td>
   </tr>
   <% end %>
