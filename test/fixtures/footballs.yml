@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  time: MyString
+  leage: MyString
+  description: MyString
+  signal: MyString
+  user_id: 1
+
+two:
+  time: MyString
+  leage: MyString
+  description: MyString
+  signal: MyString
+  user_id: 1

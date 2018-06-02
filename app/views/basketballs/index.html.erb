@@ -1,0 +1,46 @@
+<div class="pull-right">
+  <%= link_to("增加赛程", new_basketball_path, :class => "btn btn-default" ) %>
+</div>
+
+<br><br>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>时间</th>
+      <th>联赛</th>
+      <th>球队</th>
+      <th>信号</th>
+      <th>管理</th>
+
+  </tr>
+
+  </thead>
+
+  <tbody>
+  <% @basketballs.each do |basketball| %>
+  <tr>
+    <td>
+      <%= basketball.time %>
+    </td>
+    <td>
+      <i class="fas fa-basketball-ball"></i>
+        <%= basketball.league  %>
+    </td>
+
+    <td>
+
+      <%= basketball.description %>
+    </td>
+    <td>
+    <%= link_to(basketball.signal,basketball_path(basketball), :class => "btn btn-default")  %>
+    </td>
+    <td>
+      <%= link_to("Edit", edit_basketball_path(basketball), :class => "btn btn-default") %>
+
+      <%= link_to("Delete",basketball_path(basketball), :class => "fas fa-trash-alt btn btn-danger ",   :method => :delete, :data => {:confirm => "Are you sure?", }) %>
+    </td>
+  </tr>
+  <% end %>
+  </tbody>
+  </table>
