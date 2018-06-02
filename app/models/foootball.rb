@@ -1,0 +1,2 @@
+class Foootball < ApplicationRecord
+end

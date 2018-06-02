@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   end
 
   resources :games
+  resources :basketball
   root 'games#index'
 end
